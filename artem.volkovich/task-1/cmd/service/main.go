@@ -21,7 +21,7 @@ func main() {
 	}
 
 	var operator string
-	_, err = fmt.Scan(&operator)
+	_, _ = fmt.Scan(&operator)
 
 	switch operator {
 	case "+":
