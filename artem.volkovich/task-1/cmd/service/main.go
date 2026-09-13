@@ -9,6 +9,7 @@ func main() {
 	_, err := fmt.Scan(&firstArg)
 	if err != nil {
 		fmt.Println("Invalid first operand")
+		return
 	}
 
 	var secondArg int
@@ -16,6 +17,7 @@ func main() {
 	
 	if err != nil {
 		fmt.Println("Invalid second operand")
+		return
 	}
 
 	var operator string
@@ -33,6 +35,7 @@ func main() {
 			fmt.Println(firstArg / secondArg)
 		} else {
 			fmt.Println("Division by zero")
+			return
 		}
 	default:
 		fmt.Println("Invalid operation")
