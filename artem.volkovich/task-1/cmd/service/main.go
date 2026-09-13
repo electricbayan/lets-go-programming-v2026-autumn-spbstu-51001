@@ -21,19 +21,20 @@ func main() {
 	var operator string
 	_, err = fmt.Scan(&operator)
 	
-	if (operator == "+") {
+	switch operator {
+	case "+":
 		fmt.Println(firstArg + secondArg)
-	} else if (operator == "-") {
+	case "-":
 		fmt.Println(firstArg - secondArg)
-	} else if (operator == "*") {
+	case "*":
 		fmt.Println(firstArg * secondArg)
-	} else if (operator == "/") {
+	case "/":
 		if (secondArg != 0) {
 			fmt.Println(firstArg / secondArg)
 		} else {
 			fmt.Println("Division by zero")
 		}
-	} else {
+	default:
 		fmt.Println("Invalid operation")
 	}
 }
