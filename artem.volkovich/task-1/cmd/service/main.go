@@ -1,43 +1,9 @@
 package main
 
 import (
-	"fmt"
+	"github.com/electricbayan/task-1/internal/calc"
 )
 
 func main() {
-	var firstArg int
-	_, err := fmt.Scan(&firstArg)
-	if err != nil {
-		fmt.Println("Invalid first operand")
-		return
-	}
-
-	var secondArg int
-	_, err = fmt.Scan(&secondArg)
-
-	if err != nil {
-		fmt.Println("Invalid second operand")
-		return
-	}
-
-	var operator string
-	_, _ = fmt.Scan(&operator)
-
-	switch operator {
-	case "+":
-		fmt.Println(firstArg + secondArg)
-	case "-":
-		fmt.Println(firstArg - secondArg)
-	case "*":
-		fmt.Println(firstArg * secondArg)
-	case "/":
-		if secondArg != 0 {
-			fmt.Println(firstArg / secondArg)
-		} else {
-			fmt.Println("Division by zero")
-			return
-		}
-	default:
-		fmt.Println("Invalid operation")
-	}
+	calc.Calc()
 }
