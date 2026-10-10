@@ -5,22 +5,22 @@ import "fmt"
 func Parse() ([]int, error) {
 	var N, K int
 	_, err := fmt.Scan(&N)
-	if (err != nil) {
+	if err != nil {
 		return nil, fmt.Errorf("Offices input error: %w", err)
 	}
 	var output []int
-	for i:=0;i<N;i++ {
+	for i := 0; i < N; i++ {
 		min := 15
 		max := 30
 		_, err = fmt.Scan(&K)
-		if (err != nil) {
+		if err != nil {
 			return nil, fmt.Errorf("Employee input error: %w", err)
 		}
-		for j:=0;j<K;j++ {
+		for j := 0; j < K; j++ {
 			var operator string
 			var operand int
 			_, err = fmt.Scan(&operator, &operand)
-			if (err != nil) {
+			if err != nil {
 				return nil, fmt.Errorf("Temperature input error: %w", err)
 			}
 			if operator != ">=" && operator != "<=" {
@@ -35,7 +35,7 @@ func Parse() ([]int, error) {
 				if operand < max {
 					max = operand
 				}
-		}
+			}
 			if min > max {
 				output = append(output, -1)
 			} else {
@@ -43,7 +43,6 @@ func Parse() ([]int, error) {
 			}
 		}
 	}
-	
-	
+
 	return output, nil
 }
