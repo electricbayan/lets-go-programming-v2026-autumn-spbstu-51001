@@ -7,11 +7,14 @@ import (
 )
 
 func main() {
+
 	var output []int
+
 	output, err := parser.Parse()
 	if err != nil {
 		return
 	}
+
 	for _, num := range output {
 		fmt.Println(num)
 	}
