@@ -46,7 +46,6 @@ func Parse() ([]int, error) {
 		}
 
 		for range employees {
-
 			var operator string
 
 			var operand int

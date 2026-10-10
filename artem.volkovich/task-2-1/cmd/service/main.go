@@ -7,7 +7,6 @@ import (
 )
 
 func main() {
-
 	var output []int
 
 	output, err := parser.Parse()
